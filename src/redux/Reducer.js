@@ -182,22 +182,12 @@ const initialState = {
       ]
     }
   ],
-  cartItems: [],
+
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_CART':
-      return {
-        ...state,
-        cartItems: [...state.cartItems, state.products[action.payload]],
-      };
-
-    case 'DELETE_CART':
-      return {
-        ...state,
-        cartItems: state.cartItems.filter((e, i) => i !== action.payload),
-      };
+   
 
     default:
       return state;
